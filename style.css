@@ -83,7 +83,13 @@ main {
 
 .container1, .container2, .container3 {
     display: flex;
-    gap: 10px;
+    gap: 16px;
+    overflow-x:scroll;
+    padding-right: 19px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .item {
