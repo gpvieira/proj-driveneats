@@ -113,6 +113,10 @@ main {
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
 
+.selecionado ion-icon {
+    display: inline;
+}
+
 img {
     width: 144px;
     height: 87px;
