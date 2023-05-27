@@ -8,7 +8,7 @@ let precoSobremesa;
 function verificaPedido() {
     if (pratoSelecionado !== undefined && bebidaSelecionado !== undefined && sobremesaSelecionado !== undefined) {
         
-        const botaoFinalizar = document.querySelector('button');
+        const botaoFinalizar = document.querySelector('.botao-finalizar');
         botaoFinalizar.innerHTML = 'Fechar Pedido';
         botaoFinalizar.classList.add('botaoSelecionado')
         botaoFinalizar.removeAttribute('disabled');
@@ -68,6 +68,53 @@ function selecionarSobremesa(sobremesa){
 }
 
 function finalizarPedido() {
+    const backgroundWhite = document.querySelector('.background-branco')
+    const telaConfirma = document.querySelector('.janela-confirma')
+    
+    backgroundWhite.classList.add('aparece')
+    telaConfirma.classList.add('aparece')
+
+
+    let precoPratoNum2 = precoPrato.replace('R$ ','');
+    let precoPratoNum3 = precoPratoNum2.replace(',','.');
+    precoPratoNum3 = Number(precoPratoNum3);
+    
+    let precoBebidaNum2 = precoBebida.replace('R$ ','');
+    let precoBebidaNum3 = precoBebidaNum2.replace(',','.');
+    precoBebidaNum3 = Number(precoBebidaNum3);
+
+    let precoSobremesaNum2 = precoSobremesa.replace('R$ ','');
+    let precoSobremesaNum3 = precoSobremesaNum2.replace(',','.');
+    precoSobremesaNum3 = Number(precoSobremesaNum3);
+
+    let precoTotal = precoPratoNum3 + precoBebidaNum3 + precoSobremesaNum3
+    precoTotal = precoTotal.toFixed(2)
+    precoTotal = precoTotal.replace('.',',')
+
+    let pratoConf = document.querySelector('.prato-conf')
+    pratoConf.innerHTML = pratoSelecionado;
+
+    let bebidaConf = document.querySelector('.bebida-conf')
+    bebidaConf.innerHTML = bebidaSelecionado;
+
+    let sobremesaConf = document.querySelector('.sobremesa-conf')
+    sobremesaConf.innerHTML = sobremesaSelecionado;
+
+    let precoPratoConf = document.querySelector('.prato-preco-conf')
+    precoPratoConf.innerHTML = precoPratoNum2
+
+    let precoBebidaConf = document.querySelector('.bebida-preco-conf')
+    precoBebidaConf.innerHTML = precoBebidaNum2
+
+    let precoSobremesaConf = document.querySelector('.sobremesa-preco-conf')
+    precoSobremesaConf.innerHTML = precoSobremesaNum2
+
+    let precoTotalConf = document.querySelector('.total-conf')
+    precoTotalConf.innerHTML = `R$ ${precoTotal}`
+
+}
+
+function confirmarPedido() {
     const nome = prompt("Qual é o seu nome?");
     const endereco = prompt("Qual é o seu endereço?");
     

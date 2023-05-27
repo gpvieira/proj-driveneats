@@ -163,3 +163,92 @@ ion-icon {
 .botaoSelecionado {
     background: #32B72F;
 }
+
+.background-branco {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    display: none;
+}
+
+.janela-confirma {
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    width: 377px;
+    height: 353px;
+    display: none;
+    flex-direction: column;
+    padding: 24px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -188px;
+    margin-top: -176px;
+    
+    z-index: 3;
+}
+
+.aparece {
+    display: flex;
+}
+
+.fonte-branca-1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.fonte-branca-2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.fonte-branca-3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+.botao-confirma {
+    width: 329px;
+    height: 52px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    color: #50D074;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.confirma-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+

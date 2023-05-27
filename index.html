@@ -12,6 +12,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="background-branco"></div>
+
+    <div class="janela-confirma">
+        <p class="fonte-branca-1">Confirme seu pedido</p>
+        
+        <div class="container">
+            <div class="prato-div confirma-text">
+                <p class="prato-conf fonte-branca-2"></p>
+                <p class="prato-preco-conf fonte-branca-2"></p>
+            </div>
+            <div class="bebida-div confirma-text">
+                <p class="bebida-conf fonte-branca-2"></p>
+                <p class="bebida-preco-conf fonte-branca-2"></p>
+            </div>
+            <div class="sobremesa-div confirma-text">
+                <p class="sobremesa-conf fonte-branca-2"></p>
+                <p class="sobremesa-preco-conf fonte-branca-2"></p>
+            </div>
+            <div class="total-div confirma-text">
+                <p class="fonte-branca-1">TOTAL</p>
+                <p class="total-conf fonte-branca-1"></p>
+            </div>
+        </div>
+
+        <button class="botao-confirma" onclick="confirmarPedido()">Tudo certo, pode pedir!</button>
+        <p class="fonte-branca-3">Cancelar</p>
+        
+
+
+    </div>
+
     <header>
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
@@ -94,7 +126,7 @@
     </main>
     
     <footer>
-        <button onclick="finalizarPedido()" disabled>Selecione os 3 itens <br> para fechar o pedido</button>
+        <button class="botao-finalizar" onclick="finalizarPedido()" disabled>Selecione os 3 itens <br> para fechar o pedido</button>
     </footer>
     
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
