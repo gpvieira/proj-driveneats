@@ -107,6 +107,7 @@ main {
     padding-bottom: 18px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     position: relative;
+    cursor: pointer;
 }
 
 .selecionado {
@@ -147,7 +148,7 @@ button {
     line-height: 23px;
     text-align: center;
     letter-spacing: 0.018em;
-    color: #FFFFFF;
+    color: #FFFFFF;    
 }
 
 ion-icon {
@@ -162,6 +163,7 @@ ion-icon {
 
 .botaoSelecionado {
     background: #32B72F;
+    cursor:pointer;
 }
 
 .background-branco {
@@ -236,6 +238,7 @@ ion-icon {
     font-weight: 700;
     font-size: 22px;
     line-height: 26px;
+    cursor: pointer;
 }
 
 .confirma-text {
@@ -251,4 +254,7 @@ ion-icon {
     gap: 10px;
 }
 
+.botao-cancelar {
+    cursor: pointer;
+}
 

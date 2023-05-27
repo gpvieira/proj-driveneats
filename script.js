@@ -4,6 +4,8 @@ let sobremesaSelecionado;
 let precoPrato;
 let precoBebida;
 let precoSobremesa;
+let nome = '';
+let endereco = '';
 
 function verificaPedido() {
     if (pratoSelecionado !== undefined && bebidaSelecionado !== undefined && sobremesaSelecionado !== undefined) {
@@ -115,8 +117,13 @@ function finalizarPedido() {
 }
 
 function confirmarPedido() {
-    const nome = prompt("Qual é o seu nome?");
-    const endereco = prompt("Qual é o seu endereço?");
+    while (nome === '') {
+        nome = prompt("Qual é o seu nome?");
+    }
+    
+    while (endereco === '') {
+        endereco = prompt("Qual é o seu endereço?");
+    }
     
     let precoPratoNum = precoPrato.replace('R$','');
     precoPratoNum = precoPratoNum.replace(',','.');
@@ -150,5 +157,15 @@ function confirmarPedido() {
     const msgWhats = encodeURIComponent(mensagem);
 
     window.open(`https://wa.me//5581995092147?text=${msgWhats}`)
+
+}
+
+function cancelar() {
+
+    const backgroundWhite2 = document.querySelector('.background-branco')
+    const telaConfirma2 = document.querySelector('.janela-confirma')
+    
+    backgroundWhite2.classList.remove('aparece')
+    telaConfirma2.classList.remove('aparece')
 
 }
