@@ -136,10 +136,10 @@ footer {
     background: #FFFFFF;
 }
 
-button {
+.botao-finalizar {
     width: 364px;
     height: 61px;
-    background-color: grey;
+    background: #CBCBCB;
     border-radius: 50px;
     font-family: 'Roboto';
     font-style: normal;
@@ -148,7 +148,7 @@ button {
     line-height: 23px;
     text-align: center;
     letter-spacing: 0.018em;
-    color: #FFFFFF;    
+    color: #FFFFFF;
 }
 
 ion-icon {

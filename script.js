@@ -117,11 +117,11 @@ function finalizarPedido() {
 }
 
 function confirmarPedido() {
-    while (nome === '') {
+    while (nome === '' || nome === null) {
         nome = prompt("Qual é o seu nome?");
     }
     
-    while (endereco === '') {
+    while (endereco === '' || endereco === null) {
         endereco = prompt("Qual é o seu endereço?");
     }
     
