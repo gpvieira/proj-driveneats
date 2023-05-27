@@ -159,3 +159,7 @@ ion-icon {
     color: #32B72F;
     display: none;    
 }
+
+.botaoSelecionado {
+    background: #32B72F;
+}
