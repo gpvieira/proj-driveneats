@@ -1,6 +1,9 @@
 let pratoSelecionado;
 let bebidaSelecionado;
 let sobremesaSelecionado;
+let precoPrato;
+let precoBebida;
+let precoSobremesa;
 
 function verificaPedido() {
     if (pratoSelecionado !== undefined && bebidaSelecionado !== undefined && sobremesaSelecionado !== undefined) {
@@ -24,6 +27,7 @@ function selecionarPrato(prato){
     prato.classList.add('selecionado')
 
     pratoSelecionado = prato.querySelector('h4').innerHTML;
+    precoPrato = prato.querySelector('.preco').innerHTML;
 
     verificaPedido()
 
@@ -40,6 +44,7 @@ function selecionarBebida(bebida){
     bebida.classList.add('selecionado')
 
     bebidaSelecionado = bebida.querySelector('h4').innerHTML;
+    precoBebida = bebida.querySelector('.preco').innerHTML;
     
     verificaPedido()
 
@@ -56,7 +61,47 @@ function selecionarSobremesa(sobremesa){
     sobremesa.classList.add('selecionado')
 
     sobremesaSelecionado = sobremesa.querySelector('h4').innerHTML;
+    precoSobremesa = sobremesa.querySelector('.preco').innerHTML;
 
     verificaPedido()
+
+}
+
+function finalizarPedido() {
+    const nome = prompt("Qual é o seu nome?");
+    const endereco = prompt("Qual é o seu endereço?");
+    
+    let precoPratoNum = precoPrato.replace('R$','');
+    precoPratoNum = precoPratoNum.replace(',','.');
+    precoPratoNum = Number(precoPratoNum);
+    
+    let precoBebidaNum = precoBebida.replace('R$','');
+    precoBebidaNum = precoBebidaNum.replace(',','.');
+    precoBebidaNum = Number(precoBebidaNum);
+
+    let precoSobremesaNum = precoSobremesa.replace('R$','');
+    precoSobremesaNum = precoSobremesaNum.replace(',','.');
+    precoSobremesaNum = Number(precoSobremesaNum);
+
+
+    let valorTotal = precoPratoNum + precoBebidaNum + precoSobremesaNum;
+    valorTotal = valorTotal.toFixed(2);
+    valorTotal = valorTotal.replace('.',',');
+
+    let valorTotalText = `R$ ${valorTotal}`    
+    
+
+    const mensagem = `Olá, gostaria de fazer o pedido:
+    - Prato: ${pratoSelecionado}
+    - Bebida: ${bebidaSelecionado}
+    - Sobremesa: ${sobremesaSelecionado}
+    Total: ${valorTotalText}
+    
+    Nome: ${nome}
+    Endereço: ${endereco}`
+
+    const msgWhats = encodeURIComponent(mensagem);
+
+    window.open(`https://wa.me//5581995092147?text=${msgWhats}`)
 
 }
